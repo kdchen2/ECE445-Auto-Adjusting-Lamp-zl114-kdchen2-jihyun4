@@ -1,10 +1,12 @@
 # 🌟 Auto-Adjusted Smart Lighting System  
 ### Week 1–2 Progress Report
 
-**Student:** Jihyun Seo  
-**NetID:** jihyun4  
+| Student    | NetID   |
+|------------|---------|
+| Jihyun Seo | jihyun4 |
 
 ---
+
 
 ---
 
