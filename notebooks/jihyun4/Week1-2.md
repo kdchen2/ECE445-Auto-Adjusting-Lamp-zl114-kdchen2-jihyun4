@@ -49,7 +49,7 @@ Goal: provide healthier, more comfortable indoor lighting by adapting to the env
 ## 📂 Repository Contents
 - `Week1_Overview.pptx` — Slides: problem definition, block diagram, component selection.  
 - `Week2_Drawing.png` — System wiring & control diagram.  
-- `README.md` — This progress summary.
+- `Week1-2.md` — This progress summary.
 
 ---
 
