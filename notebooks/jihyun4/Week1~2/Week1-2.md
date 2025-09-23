@@ -49,9 +49,9 @@ Designing a **smart desk lighting system** that automatically adjusts **brightne
   * **Common Ground** between 12 V supply and ESP32
 * **Gate Drive (ESP32 → MOSFET)**:
 
-  * ESP32 **PWM (LEDC)** → **100 Ω** series resistor → **Gate**
-  * **10–100 kΩ** pull‑down from Gate to GND (keeps LED off at reset)
+  * ESP32 **PWM (LEDC)**  → **Gate**
   * One MOSFET per channel (Warm, Cool)
+
 * **Protection/Notes**:
 
   * Keep wiring short; add small **RC snubber** only if ringing is observed.
@@ -62,10 +62,8 @@ Designing a **smart desk lighting system** that automatically adjusts **brightne
                        │
                  100 Ω │
 ESP32 PWM ─────────── GATE
-                       │
-                 10–100 kΩ
-                       │
-                      GND
+                       
+               
 ```
 
 ### PWM & Control Logic
