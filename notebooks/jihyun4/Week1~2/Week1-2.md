@@ -1,4 +1,4 @@
-# 🌟 Auto-Adjusted Smart Lighting System  
+# Auto-Adjusted Smart Lighting System  
 ### Week 1–2 Progress Report
 
 | Student    | NetID   |
@@ -10,13 +10,13 @@
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 Designing a **smart desk lighting system** that automatically adjusts **brightness** and **color temperature** using **ambient light sensors**, **color sensors**, and an **ESP32 microcontroller**.  
 Goal: provide healthier, more comfortable indoor lighting by adapting to the environment.
 
 ---
 
-## ✅ Week 1 Progress
+## Week 1 Progress
 - **Literature Review & Ideation**
   - Identified issues of static desk lamps (eye strain, no adaptation to daylight).
   - Reviewed existing smart lighting approaches and limitations.
@@ -33,7 +33,7 @@ Goal: provide healthier, more comfortable indoor lighting by adapting to the env
 
 ---
 
-## ✅ Week 2 Progress
+## Week 2 Progress
 - **Hardware Design**
   - Sensors connected via shared **I²C bus** (SDA/SCL).
   - LED driver wiring defined:
@@ -53,14 +53,14 @@ Goal: provide healthier, more comfortable indoor lighting by adapting to the env
 
 ---
 
-## 📂 Repository Contents
+## Repository Contents
 - `Week1_Overview.pptx` — Slides: problem definition, block diagram, component selection.  
 - `Week2_Drawing.png` — System wiring & control diagram.  
 - `Week1-2.md` — This progress summary.
 
 ---
 
-## 🔜 Next Steps
+## Next Steps
 - Prototype I²C communication with ALS + Color Sensor.  
 - Implement PWM control for dual LED drivers.  
 - Develop firmware loop: **dynamic brightness + color temperature control**.  
