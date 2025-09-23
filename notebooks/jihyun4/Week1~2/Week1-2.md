@@ -1,68 +1,84 @@
-# Auto-Adjusted Smart Lighting System  
-### Week 1–2 Progress Report
+# Auto-Adjusted Smart Lighting System
+
+### Week 1–2 Progress Report (Sep 8–21, 2025)
 
 | Student    | NetID   |
-|------------|---------|
+| ---------- | ------- |
 | Jihyun Seo | jihyun4 |
 
 ---
 
-
----
-
 ## Project Overview
-Designing a **smart desk lighting system** that automatically adjusts **brightness** and **color temperature** using **ambient light sensors**, **color sensors**, and an **ESP32 microcontroller**.  
-Goal: provide healthier, more comfortable indoor lighting by adapting to the environment.
+
+Designing a **smart desk lighting system** that automatically adjusts **brightness** and **correlated color temperature (CCT)** using an **ambient light sensor (lux)**, a **color sensor**, and an **ESP32**.
+**Goal:** healthier, more comfortable indoor lighting that adapts to the environment.
+
+> **Control Architecture Update:** We replaced LED drivers with **logic‑level N‑MOSFETs** (low‑side PWM switching) to modulate LED brightness directly. Two MOSFET channels (Warm, Cool) allow brightness and CCT mixing without dedicated DIM‑pin drivers.
 
 ---
 
-## Week 1 Progress
-- **Literature Review & Ideation**
-  - Identified issues of static desk lamps (eye strain, no adaptation to daylight).
-  - Reviewed existing smart lighting approaches and limitations.
-- **Initial Block Diagram**
-  - Sensors → ESP32 → LED Drivers → LEDs
-  - Defined subsystems: sensing, processing, actuation, power.
-- **Component Selection**
-  - **ESP32** chosen as main controller (I²C + Wi-Fi/Bluetooth).
-  - Candidate sensors: **Ambient Light Sensor (ALS)** + **RGB Color Sensor**.
-  - **Meanwell LDD-L series LED drivers** selected for constant-current control.
-- **LED Choice**
-  - Using **Cree J-Series LEDs (6V config)**.
-  - Dual-channel LEDs (Cool White + Warm White) for brightness & color control.
+## Week 1 Progress (Sep 8–14)
+
+* **Literature Review & Ideation**
+
+  * Identified problems with static desk lamps (eye strain, no adaptation to daylight).
+  * Reviewed smart lighting strategies and CCT mixing approaches.
+* **Initial Block Diagram**
+
+  * Sensors → ESP32 → **MOSFET PWM Stages** → LED Channels
+  * Subsystems defined: sensing, processing, actuation, power.
+* **Component Exploration**
+
+  * **MCU:** ESP32 (I²C + Wi‑Fi/BLE; LEDC PWM).
+  * **Sensors:** Ambient Light Sensor (ALS) + RGB Color Sensor (I²C).
+  * **Emitters:** Two LED channels: **Cool White** and **Warm White**.
+  * **Actuation (updated):** Replace Mean Well LDD drivers with **logic‑level N‑MOSFETs** for low‑side PWM control per channel.
 
 ---
 
-## Week 2 Progress
-- **Hardware Design**
-  - Sensors connected via shared **I²C bus** (SDA/SCL).
-  - LED driver wiring defined:
-    - DC Adapter → LED Drivers (Vin)
-    - ESP32 PWM → DIM pins
-    - LED outputs isolated per channel.
-- **System Drawing**
-  - Schematic showing:
-    - **DC Adapter → LED Drivers → Warm/Cool LEDs**
-    - **ESP32 → PWM (DIM) → LED Drivers**
-    - **ESP32 → I²C → Sensors**
-- **Control Logic**
-  - ESP32 reads sensors:
-    - Ambient light → adjusts **overall brightness**.
-    - Color sensor → adjusts **Warm vs Cool ratio**.
-  - PWM channels configured on ESP32 for dual-driver control.
+## Week 2 Progress (Sep 15–21)
 
----
+### Hardware Design (MOSFET‑based)
 
-## Repository Contents
-- `Week1_Overview.pptx` — Slides: problem definition, block diagram, component selection.  
-- `Week2_Drawing.png` — System wiring & control diagram.  
-- `Week1-2.md` — This progress summary.
+* **I²C Bus**: ALS + Color sensor share SDA/SCL with proper pull‑ups.
+* **LED Power Path (12 V)**:
 
----
+  * **+12 V** → LED+ (strip or COB segment)
+  * LED− → **MOSFET Drain**
+  * **MOSFET Source** → GND
+  * **Common Ground** between 12 V supply and ESP32
+* **Gate Drive (ESP32 → MOSFET)**:
 
-## Next Steps
-- Prototype I²C communication with ALS + Color Sensor.  
-- Implement PWM control for dual LED drivers.  
-- Develop firmware loop: **dynamic brightness + color temperature control**.  
+  * ESP32 **PWM (LEDC)** → **100 Ω** series resistor → **Gate**
+  * **10–100 kΩ** pull‑down from Gate to GND (keeps LED off at reset)
+  * One MOSFET per channel (Warm, Cool)
+* **Protection/Notes**:
 
----
+  * Keep wiring short; add small **RC snubber** only if ringing is observed.
+  * Select MOSFET with low **RDS(on)** at **VGS = 3.3 V** (true logic‑level).
+
+```
+12V+ ──> LED+  LED− ──> D  N‑MOSFET  S ──> GND
+                       │
+                 100 Ω │
+ESP32 PWM ─────────── GATE
+                       │
+                 10–100 kΩ
+                       │
+                      GND
+```
+
+### PWM & Control Logic
+
+* **LEDC Setup**: 2 channels (Warm/Cool), **1–4 kHz** PWM (avoid visible flicker & audible buzz).
+  Resolution: **10–13 bits** depending on chosen frequency.
+* **Brightness Control**: Lux error → PI controller → total duty.
+* **CCT Mix**: Color error → mixer sets Warm vs. Cool ratio.
+* **Gamma Mapping**: Optional **γ ≈ 2.2** for perceptual linearity.
+* **Rate Limiting**: Duty slew limits to ensure smooth transitions.
+
+### Why MOSFETs (vs. LED Drivers)
+
+* **Simplicity & Size**: Fewer parts on the desk‑lamp prototype PCB.
+* **Cost**: Low‑cost SOT‑23 / PowerPAK devices cover our current needs.
+* \*\*Direct P
