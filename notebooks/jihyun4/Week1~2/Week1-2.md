@@ -77,4 +77,4 @@ ESP32 PWM ─────────── GATE
 ### Why MOSFETs (vs. LED Drivers)
 
 * **Simplicity & Size**: Fewer parts on the desk‑lamp prototype PCB.
-* \*\*Direct P
+
