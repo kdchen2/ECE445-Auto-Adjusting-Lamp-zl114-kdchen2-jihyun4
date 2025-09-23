@@ -72,11 +72,9 @@ ESP32 PWM ─────────── GATE
   Resolution: **10–13 bits** depending on chosen frequency.
 * **Brightness Control**: Lux error → PI controller → total duty.
 * **CCT Mix**: Color error → mixer sets Warm vs. Cool ratio.
-* **Gamma Mapping**: Optional **γ ≈ 2.2** for perceptual linearity.
-* **Rate Limiting**: Duty slew limits to ensure smooth transitions.
+
 
 ### Why MOSFETs (vs. LED Drivers)
 
 * **Simplicity & Size**: Fewer parts on the desk‑lamp prototype PCB.
-* **Cost**: Low‑cost SOT‑23 / PowerPAK devices cover our current needs.
 * \*\*Direct P
