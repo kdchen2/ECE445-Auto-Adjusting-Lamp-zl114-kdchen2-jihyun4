@@ -22,5 +22,14 @@
  
 - present proposal to prof. Fiflet
 - start investigating PWM and ADC on the ESP32
+- could not figure out how to manually link esp32 to i2c color sensor in ESP-IDF; could only read its device ID register
+- adding the color sensor manufacturer's libraries to ESP-IDF was also not viable- too many dependencies upon dependencies to manually go through
+- understanding both how ESP-IDF and the color sensor manufacturer's libraries handle i2c to reverse engineer communication is too much of a time cost to justify
+  
+  Due to being unable to use the color sensor in ESP-IDF, I will be switching to arduino IDE for the rest of the project for the sake of time. This way I can use the color sensor manufacturer's library to handle i2c communication.
+
+#### Week 4:
+
+
 
 
