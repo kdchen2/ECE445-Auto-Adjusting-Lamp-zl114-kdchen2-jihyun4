@@ -22,6 +22,10 @@
 - Objective: check footprint alignments, net connections, and physical layout feasibility.  
 - This early board may not be fully functional, but it serves as a proof-of-concept for further refinement.  
 
+<img width="1554" height="1057" alt="image" src="https://github.com/user-attachments/assets/46746eeb-a579-4ca0-9b62-d3df53fdcdda" />
+<img width="1340" height="1185" alt="image" src="https://github.com/user-attachments/assets/30c5d549-ff67-47ad-8a4e-8156862cd5d1" />
+
+
 ### ⚙️ Technical Challenges
 - Major challenge: implementing **I²C communication** for the color sensor and **ADC readout** for the lux sensor at the breadboard stage.  
 - Encountered unstable readings and communication errors, likely due to wiring noise and timing mismatches.  
