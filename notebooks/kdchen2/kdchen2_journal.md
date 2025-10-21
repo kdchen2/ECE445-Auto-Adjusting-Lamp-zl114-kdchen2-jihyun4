@@ -12,7 +12,7 @@
 - begin following ESP32 tutorials
 - successfully flash ESP32 with GPIO tutorial
 
-### Week 1-2 Progress Report (9/22/25-10/5/25)
+### Week 3-4 Progress Report (9/22/25-10/5/25)
 ---
 #### Week 3:
 - come up with validation tests for high level requirements:
@@ -28,8 +28,54 @@
   
   Due to being unable to use the color sensor in ESP-IDF, I will be switching to arduino IDE for the rest of the project for the sake of time. This way I can use the color sensor manufacturer's library to handle i2c communication.
 
+- the color sensor is able to communicate to the esp32 using arduino ide
+
 #### Week 4:
+Objective: Create smooth dimming algorithm that responds to lux sensor
+- currently working with photo resistor + 10k resistor in series as a lux sensor and a single LED, since our lux sensor has not arrived yet and the connections on the LED strips are delicate and hard to transport
+  - LED PWM is currently directly connected to the 'lux sensor' output in the code found in "week4_code/sketch_sep26a.ino"
+  - the smoothness of our dimming/brightening algorithm can be determined by observing the LED's change in brightness
+
+- created filtering algorithm for sensor data filtering for the lux sensor so that rapid changes in lux sensor data would be rejected:
+  1. create an array for sensor values
+  2. compare current sensor reading to the average of the data in the sensor values array +/- some percent of tolerance (our desired rate of change)
+  3. if the current sensor reading is greater than or equal to the average + tolerance, then rotate in average + tolerance into the array; if the current sensor reading is less than or equal to the average - tolerance, then rotate in average - tolerance
+  4. use the average of the sesnor data array for our LED PWM output
+- algorithm works well with small tolerance values like 0.2 
+  - the sensor does not produce rapid changes when the environment conditions change suddenly (like waving a hand over it)
+  - the LED adjusts smoothly when the sensor is held in darkness over a long time
+- algorithm has inherent gamma adjustment due to the nature of average values increasing non-linearly, offsetting the human (logarithmic) perception of lux and appearing linear
+  - for large values the real tolerance value, which affects adjumsent rate, becomes much larger than the real tolerance for small values: (1 + tolerance)*1000 > (1 + tolerance)*10
+
+### Week 5-6 Progress Report (10/6/25-10/19/25)
+---
+#### Week 5:
+Objective: Confirm algorithm works with actual LED strips used for the lamp
+
+- needed to adjust tolerance value to 0.02 for smoothness with the LED strips
+
+- presented our breadboard with the filtering algorithm during the breadboard demo
+
+- wrote initial algorithm for auto adjusting to target lux and color temperature, did not implement yet- see "week5_code/sketch_sep26a.ino" lines 72-98
+
+- our proposed lux sensor arrived, however we cureently cannot get any output from it
 
 
+#### Week 6:
+Objective: Implement auto adjusting to target lux and color temperature
+
+- worked on design document
+- made a physical 'lamp head' using a paper towel roll and staples, wire connections for LED strips are now secured to the lamp head and are more resilient in transport
+
+- initial algorithm did not work well and resulted in oscillation effects and unintended behavior
+  - wrote a new algorithm for auto adjusting- see "week6_code/sketch_sep26b.ino"
+
+New auto adjusting algorithm:
+
+[add explanation here later]
+
+
+### Week 7-8 Progress Report (10/20/25-11/2/25)
+---
 
 
