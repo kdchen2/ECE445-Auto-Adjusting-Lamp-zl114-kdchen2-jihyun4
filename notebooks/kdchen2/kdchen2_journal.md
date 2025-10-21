@@ -32,6 +32,8 @@
 
 #### Week 4:
 Objective: Create smooth dimming algorithm that responds to lux sensor
+
+Current Set-Up:
 - currently working with photo resistor + 10k resistor in series as a lux sensor and a single LED, since our lux sensor has not arrived yet and the connections on the LED strips are delicate and hard to transport
   - LED PWM is currently directly connected to the 'lux sensor' output in the code found in "week4_code/sketch_sep26a.ino"
   - the smoothness of our dimming/brightening algorithm can be determined by observing the LED's change in brightness
@@ -70,12 +72,32 @@ Objective: Implement auto adjusting to target lux and color temperature
 - initial algorithm did not work well and resulted in oscillation effects and unintended behavior
   - wrote a new algorithm for auto adjusting- see "week6_code/sketch_sep26b.ino"
 
+Current Set-Up:
+- still using photo resistor as lux sensor due to being unable to make our official color sensor work
+- both lux sensor and color sensors are connected and are giving readings to the esp32
+- both warm and cool LED strips are connected and independantly powered and will need to be independantly driven
+- target lux and temp are currently set by a temporary ADC pin and 4 resistor voltage divider
+
 New auto adjusting algorithm:
+Prerequisite: convert rgb data to a value between 0 and 4096 similar to the adc output, temp- 0 = cool and 4096 = warm
+1. set range window for which pwm output to can be adjusted based on the target lux
+2. directly modify pwm output using color sensor data temp and target temp while limiting adjustment based on target lux and sensor lux
+   - if the lux sensor detects a bright environment, the window is scaled down; vice versa
+   - if the target lux is large, the window is linearly shifted right (like from 0-2048 to 400-2448)
+3. double check if the output is within range for lux 
+4. feed output through the filtering algorithm discussed earlier
 
-[add explanation here later]
-
+- despite sensor data being smoothed out by the filtering algorithm, the adjustment algorithm does not result in a smooth change in LED PWM- however it was resolved by putting the output through the filtering algorithm
+- the algorithm otherwise works and produces expected behavior, however it is difficult to test due to having to tie together multiple sensors
+- we will need to empirically decide our set target temperatures and lux for the different modes of the lamp
 
 ### Week 7-8 Progress Report (10/20/25-11/2/25)
 ---
+#### Week 7:
+Objective: Update code to work with our proposed lux sensor
+
+- partners were able to get the lux sensor to read values from environment
+- will use a spare esp32 and new arduino project to test sensor sensitivity
+
 
 
