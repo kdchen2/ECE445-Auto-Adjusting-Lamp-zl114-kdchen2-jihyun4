@@ -98,6 +98,10 @@ Objective: Update code to work with our proposed lux sensor
 
 - partners were able to get the lux sensor to read values from environment
 - will use a spare esp32 and new arduino project to test sensor sensitivity
+  - found out that the lux sensor only goes from ~0.31-2.53V and is very sensitive to light (it reaches its max value too quickly)
+  - solved sensitivity issue by applying duct tape to sensor
+  - will need to code a function that inverts then scales the sensor output to 0-4095
+- soldered together a spare lamp head for PCB
 
 
 
