@@ -23,6 +23,10 @@ RX (USB-UART) ↔ TX (ESP32)
 
 Earlier, we mistakenly connected TX→TX and RX→RX, preventing serial communication.  
 After correcting the crossover connection, programming became stable and repeatable.
+<img width="1415" height="935" alt="image" src="https://github.com/user-attachments/assets/0afff1e2-d8a4-41f7-95ae-b89fb9e8edcd" />
+<img width="1495" height="921" alt="image" src="https://github.com/user-attachments/assets/6c41a0d4-5c04-4b63-b246-0385ed9e9089" />
+<img width="1031" height="1141" alt="image" src="https://github.com/user-attachments/assets/f2a857f8-ce48-41e6-a400-70ee673a8e4f" />
+
 
 ---
 
@@ -33,6 +37,8 @@ However, it failed to program due to the incorrect download circuit design.
 This board served as an important prototype for layout verification and physical fit.  
 
 After confirming the programming fix, we redesigned the circuit and submitted the updated PCB order, expected to arrive in early November.
+
+<img width="2398" height="1845" alt="image" src="https://github.com/user-attachments/assets/f9ab89c8-3516-487f-83f7-e37283a2581c" />
 
 ---
 
