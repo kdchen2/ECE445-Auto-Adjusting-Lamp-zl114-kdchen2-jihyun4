@@ -1,0 +1,21 @@
+# Bi-Weekly Lab Notebook Entry: Weeks 1-2
+
+## Week 1: Project Proposal & Component Research
+**Date Range:** September 15, 2025 – September 22, 2025
+
+### 1. Objectives
+* Finalize project idea: "Auto-Adjusted Smart Desk Lamp."
+* Meet with TA (Zhuoer Zhang) to discuss feasibility.
+* Draft and submit the Project Proposal and Team Contract.
+* Select and order major components (ESP32, voltage regulator, sensors).
+* Define high-level requirements (Lux targets, power efficiency).
+
+### 2. Work Record
+
+#### 2.1 Component Selection & Research
+We determined the core components required to meet our requirements of 450 Lux output and color temperature adjustment (2700K–6500K).
+
+* **Microcontroller:** Selected **ESP32-S3 (WROOM-1)**.
+    * *Reasoning:* We need two ADC channels (one for the photoresistor/OPT101, one for internal monitoring) and I2C for the color sensor. The ESP32 also has high-resolution PWM (LEDC) needed for smooth dimming (Target: <2% change/sec).
+* **Power Regulation:** Selected **LM723CN**.
+    * *Reasoning:* We
