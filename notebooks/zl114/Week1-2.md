@@ -28,8 +28,7 @@ Started sketching the power flow. The system requires two voltage rails.
 * **Rail A:** 12V Direct -> LED Strips (Warm & Cool) -> MOSFET Drain.
 * **Rail B:** 12V -> LM723 Step-down -> 3.3V -> ESP32 & Sensors.
 
-![Block Diagram Sketch](./images/initial_block_diagram_sketch.jpg)
-*(Note: Upload a photo of your whiteboard or paper sketch here)*
+
 
 #### 2.3 Requirements Definition
 Established the "High-Level Requirements" for the proposal:
@@ -60,7 +59,7 @@ We built the step-down circuit on the breadboard to power the ESP32 from the 12V
 * **Testing:** Initially, the output was drifting. We added a filter capacitor ($C_{out} = 100 \mu F$) to the output to smooth transients.
 * **Result:** Tuned resistors to achieve a stable **3.1V - 3.3V**. This is within the safe range for the ESP32 (3.0V - 3.6V).
 
-![LM723 Breadboard Photo](./images/lm723_breadboard.jpg)
+
 
 #### 2.2 LED Control Logic (PWM)
 We verified the PWM control for the LEDs. We are using the ESP32 `LEDC` peripheral.
