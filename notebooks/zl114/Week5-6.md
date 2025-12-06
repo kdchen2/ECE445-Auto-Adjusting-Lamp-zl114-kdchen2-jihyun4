@@ -11,26 +11,8 @@
 
 ### 2. Work Record
 
-#### 2.1 Firmware Implementation: Data Smoothing
-We implemented the core filtering logic on the ESP32 to satisfy the "no flicker" requirement.
-* **Algorithm:** We created a circular buffer of size 15 (`sample_sz = 15`) to store recent sensor readings.
-* **Logic:**
-    1.  Calculate average of the array: `get_avg()`.
-    2.  Define a dynamic tolerance window based on the current average.
-    3.  If a new reading is within tolerance, add it. If it is an outlier (noise), clamp it to the max allowed step size.
-* **Code Snippet:**
-    ```cpp
-    float filter_val(int num, float avg, float tolerance) {
-        float increment = tolerance * avg;
-        float high = avg + increment;
-        float low = avg - increment;
-        // Logic to clamp 'num' between low and high
-        return rtn_val;
-    }
-    ```
-* **Testing:** We printed the output to the Serial Monitor. The values ramped up smoothly even when the input jumped instantly, confirming the logic works.
 
-#### 2.2 Mechanical Prototyping
+#### 2.1 Mechanical Prototyping
 * **Task:** Printed a test mount for the LED strip and the base for the PCB.
 * **Result:** The 3D printed housing holds the LED strip securely, but we need to adjust the mounting holes for the PCB in the base, as the dimensions were slightly off in the CAD model.
 
