@@ -23,7 +23,8 @@ We moved from hand-drawn sketches to the final CAD schematic.
 * **LED Drivers:** Wired the Gate of the IRLZ24N MOSFETs to ESP32 GPIO pins. Added pull-down resistors (10k$\Omega$) to the Gates to prevent floating states during boot-up.
 * **Sensor Interface:** Added headers for the OPT101 (analog) and TCS34725 (I2C).
 
-![Final Schematic Screenshot](./images/schematic_v1.png)
+<img width="1209" height="1041" alt="f46564ae80e5317ca2fc37477cfb7fe3" src="https://github.com/user-attachments/assets/0b458d69-508e-48ef-889c-52e82f3ca31d" />
+
 
 #### 2.3 Design Document
 Completed the Design Document, including the tolerance analysis for the PWM frequency (1 kHz) to prove it will be flicker-free. Submitted for review.
