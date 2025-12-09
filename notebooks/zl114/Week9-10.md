@@ -6,7 +6,7 @@
 ### 1. Objectives
 * Assemble the Final Round PCB (Round 3).
 * Verify power rails and signal integrity on the new board.
-* Validate sensor hardware integration (I2C and Analog lines).
+* Validate sensor hardware integration (I2C and Analog lines)
 * Prepare hardware for the Mock Demo.
 
 ### 2. Work Record
