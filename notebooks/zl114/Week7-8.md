@@ -6,7 +6,7 @@
 ### 1. Objectives
 * Debug the Round 1 PCB failure (Hardware level).
 * Redesign the schematic to include an on-board programmer.
-* Perform Breadboard Demo 2 (Hardware Verification).
+* Perform Breadboard Demo 2 (Hardware Verification)
 
 ### 2. Work Record
 
