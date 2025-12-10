@@ -1,0 +1,48 @@
+Call Number: 0 Avg Value: 10 Change in Avg: 0 Input Value: 3000
+[10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+Call Number: 5 Avg Value: 12 Change in Avg: 1 Input Value: 3000
+[10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 15, 15, 16, 16, 17]
+Call Number: 10 Avg Value: 15 Change in Avg: 1 Input Value: 3000
+[10, 10, 10, 10, 10, 15, 15, 16, 16, 17, 18, 18, 19, 20, 21]
+Call Number: 15 Avg Value: 20 Change in Avg: 1 Input Value: 3000
+[15, 15, 16, 16, 17, 18, 18, 19, 20, 21, 22, 24, 25, 27, 28]
+Call Number: 20 Avg Value: 26 Change in Avg: 1 Input Value: 3000
+[18, 18, 19, 20, 21, 22, 24, 25, 27, 28, 30, 32, 34, 35, 37]
+Call Number: 25 Avg Value: 34 Change in Avg: 1 Input Value: 3000
+[22, 24, 25, 27, 28, 30, 32, 34, 35, 37, 39, 42, 44, 46, 49]
+Call Number: 30 Avg Value: 45 Change in Avg: 2 Input Value: 3000
+[30, 32, 34, 35, 37, 39, 42, 44, 46, 49, 52, 55, 58, 61, 65]
+Call Number: 35 Avg Value: 60 Change in Avg: 4 Input Value: 3000
+[39, 42, 44, 46, 49, 52, 55, 58, 61, 65, 68, 72, 76, 80, 85]
+Call Number: 40 Avg Value: 78 Change in Avg: 4 Input Value: 3000
+[52, 55, 58, 61, 65, 68, 72, 76, 80, 85, 90, 95, 100, 105, 111]
+Call Number: 45 Avg Value: 103 Change in Avg: 6 Input Value: 3000
+[68, 72, 76, 80, 85, 90, 95, 100, 105, 111, 117, 124, 131, 138, 146]
+Call Number: 50 Avg Value: 135 Change in Avg: 8 Input Value: 3000
+[90, 95, 100, 105, 111, 117, 124, 131, 138, 146, 154, 163, 172, 181, 191]
+Call Number: 55 Avg Value: 177 Change in Avg: 10 Input Value: 3000
+[117, 124, 131, 138, 146, 154, 163, 172, 181, 191, 202, 213, 225, 238, 251]
+Call Number: 60 Avg Value: 231 Change in Avg: 12 Input Value: 3000
+[154, 163, 172, 181, 191, 202, 213, 225, 238, 251, 265, 280, 295, 312, 329]
+Call Number: 65 Avg Value: 304 Change in Avg: 16 Input Value: 3000
+[202, 213, 225, 238, 251, 265, 280, 295, 312, 329, 347, 367, 387, 409, 432]
+Call Number: 70 Avg Value: 398 Change in Avg: 21 Input Value: 3000
+[265, 280, 295, 312, 329, 347, 367, 387, 409, 432, 456, 481, 508, 536, 566]
+Call Number: 75 Avg Value: 522 Change in Avg: 28 Input Value: 3000
+[347, 367, 387, 409, 432, 456, 481, 508, 536, 566, 597, 630, 665, 702, 741]
+Call Number: 80 Avg Value: 684 Change in Avg: 36 Input Value: 3000
+[456, 481, 508, 536, 566, 597, 630, 665, 702, 741, 783, 826, 872, 921, 972]
+Call Number: 85 Avg Value: 896 Change in Avg: 47 Input Value: 3000
+[597, 630, 665, 702, 741, 783, 826, 872, 921, 972, 1026, 1083, 1143, 1207, 1274]
+Call Number: 90 Avg Value: 1174 Change in Avg: 61 Input Value: 3000
+[783, 826, 872, 921, 972, 1026, 1083, 1143, 1207, 1274, 1344, 1419, 1498, 1581, 1669]
+Call Number: 95 Avg Value: 1539 Change in Avg: 81 Input Value: 3000
+[1026, 1083, 1143, 1207, 1274, 1344, 1419, 1498, 1581, 1669, 1762, 1860, 1963, 2072, 2188]
+Call Number: 100 Avg Value: 2017 Change in Avg: 106 Input Value: 3000
+[1344, 1419, 1498, 1581, 1669, 1762, 1860, 1963, 2072, 2188, 2309, 2437, 2573, 2716, 2867]
+Call Number: 105 Avg Value: 2516 Change in Avg: 88 Input Value: 3000
+[1762, 1860, 1963, 2072, 2188, 2309, 2437, 2573, 2716, 2867, 3000, 3000, 3000, 3000, 3000]
+Call Number: 110 Avg Value: 2860 Change in Avg: 54 Input Value: 3000
+[2309, 2437, 2573, 2716, 2867, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000]
+Call Number: 115 Avg Value: 3000 Change in Avg: 9 Input Value: 3000
+[3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000]
