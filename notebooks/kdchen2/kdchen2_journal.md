@@ -101,7 +101,56 @@ Objective: Update code to work with our proposed lux sensor
   - found out that the lux sensor only goes from ~0.31-2.53V and is very sensitive to light (it reaches its max value too quickly)
   - solved sensitivity issue by applying duct tape to sensor
   - will need to code a function that inverts then scales the sensor output to 0-4095
-- soldered together a spare lamp head for PCB
+- soldered together a spare lamp head for PCB.
 
+#### Week 8:
+Objective: Continue tuning algorithm and Program first PCB
 
+- Update on lux sensor situation: partners and I decided to stick with the photoresistor as a lux sensor due to the OPT101's sensitivity issue, and also due to its limited availability. If we soldered our 1 OPT101 onto a bad PCB we would lose it forever, whereas photoresistors are plentiful and cheap.
+- Continued to tweaks parameters involving auto adjustment.
+- First PCB initially had issues programming due to unexpected complexity of the programming hardware needed.
+  - We eventually found an external programmer CH340K that could program the chip.
+  - However, for the first round design, though it could be programmed it did not turn on.
 
+### Week 9-10 Progress Report (11/3-11/16/25)
+---
+#### Week 9 and 10:
+Objective: Troubleshoot PCB design
+
+- We've burned almost all of our original ESP32-S3 chips.
+- The next 2/3 of our initial ESP32-S3 chips were lost in attempts to troubleshoot our PCB.
+  - Eventually we realized we could not have both the programer and the 12V power supply plugged in at once otherwise the microcontroller would be over-volted.
+  - My partners also resolved the issue with the PCB not turning on.
+
+- Eventually we were able to assemble 1 round 2 PCB. However the round 2 PCB was unable to se different modes of the lamp, which was part of our initial proposal.
+  - I was able to convince my partners to add additional through holes for user IO for the ESP32-S3 for our round 4 PCBs
+- The firmware also didn't work as well on the PCB (in regards to changing color) due to sensor position and the lamp head being static.
+
+### Week 11-End of Sememster Progess Report (11/17-12/14/25)
+
+#### Week 11:
+Objective: Update firmware for better color changing
+
+- My initial intuition was to increase the tolerance value for the data filtering algorithm when applying it to the RGB color sensor, that way it would be more responsive to changes in environment light color.
+ - This seems to have worked well enough.
+
+#### Week 12:
+Objective: Build 4th Round PCB before Demo:
+
+- 4th round PCB arrived in the ECEB over fall break, the one with more user IO added.
+- Assembly went smoothly for the most part except it had the same problem as the first PCB: it could be programmed but it could not turn on.
+  - Turns out it was a problem with the power circutry- which was only delivering 3.04V.
+  - According to the ESP32-S3 data sheet this is theoretically OK and the round 2 lamp's ESP32-S3 was also running on 3.04V, however the chip may need a higher initial voltage to actually start up.
+  - I confirmed this when I shorted the last voltage limiting resistor and the PCB was able to power up.
+  - I soldered another resistor in parallel to resolve the issue.
+ 
+- The 3D printers were occupied, so the 4th round lamp had to be built out of miscellaneus materials I had laying around.
+
+#### Week 13-14:
+Objective: Complete Demo, Presentation, and Final Paper
+
+- Before the demo I realized the unresponsiveness of the color changing was actually because I set another tolerance value too high in the adjust() function which tested if the color sensor data was an acceptable deviation from a target.
+  - Essentially the range of (color is OK-do not adjust) was too wide and should've been narrower than that of the LUX sensor.
+  - This was addressed in the final version of the firmware and was programmed into our 4th round lamp, see /code/, however it did not make it into our 2nd round lamp.
+ 
+- Demo and Presentation went fine otherwise
