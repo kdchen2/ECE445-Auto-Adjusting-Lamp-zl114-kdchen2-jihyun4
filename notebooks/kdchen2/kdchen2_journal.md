@@ -127,7 +127,7 @@ Objective: Troubleshoot PCB design
 - The firmware also didn't work as well on the PCB (in regards to changing color) due to sensor position and the lamp head being static.
 
 ### Week 11-End of Sememster Progess Report (11/17-12/14/25)
-
+---
 #### Week 11:
 Objective: Update firmware for better color changing
 
@@ -148,9 +148,10 @@ Objective: Build 4th Round PCB before Demo:
 
 #### Week 13-14:
 Objective: Complete Demo, Presentation, and Final Paper
-
+---
 - Before the demo I realized the unresponsiveness of the color changing was actually because I set another tolerance value too high in the adjust() function which tested if the color sensor data was an acceptable deviation from a target.
   - Essentially the range of (color is OK-do not adjust) was too wide and should've been narrower than that of the LUX sensor.
   - This was addressed in the final version of the firmware and was programmed into our 4th round lamp, see /code/, however it did not make it into our 2nd round lamp.
  
 - Demo and Presentation went fine otherwise
+
