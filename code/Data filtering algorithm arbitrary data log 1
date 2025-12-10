@@ -1,0 +1,80 @@
+Call Number: 0 Avg Value: 400 Change in Avg: 0 Input Value: 823
+[400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400]
+Call Number: 1 Avg Value: 405 Change in Avg: 5 Input Value: 823
+[400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 480]
+Call Number: 2 Avg Value: 411 Change in Avg: 6 Input Value: 823
+[400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 480, 486]
+Call Number: 3 Avg Value: 417 Change in Avg: 6 Input Value: 823
+[400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 480, 486, 493]
+Call Number: 4 Avg Value: 424 Change in Avg: 7 Input Value: 823
+[400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 480, 486, 493, 500]
+Call Number: 5 Avg Value: 431 Change in Avg: 7 Input Value: 823
+[400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 480, 486, 493, 500, 508]
+Call Number: 6 Avg Value: 439 Change in Avg: 8 Input Value: 823
+[400, 400, 400, 400, 400, 400, 400, 400, 400, 480, 486, 493, 500, 508, 517]
+Call Number: 7 Avg Value: 447 Change in Avg: 8 Input Value: 823
+[400, 400, 400, 400, 400, 400, 400, 400, 480, 486, 493, 500, 508, 517, 526]
+Call Number: 8 Avg Value: 456 Change in Avg: 9 Input Value: 823
+[400, 400, 400, 400, 400, 400, 400, 480, 486, 493, 500, 508, 517, 526, 537]
+Call Number: 9 Avg Value: 466 Change in Avg: 10 Input Value: 823
+[400, 400, 400, 400, 400, 400, 480, 486, 493, 500, 508, 517, 526, 537, 548]
+Call Number: 10 Avg Value: 477 Change in Avg: 11 Input Value: 823
+[400, 400, 400, 400, 400, 480, 486, 493, 500, 508, 517, 526, 537, 548, 559]
+Call Number: 11 Avg Value: 488 Change in Avg: 11 Input Value: 823
+[400, 400, 400, 400, 480, 486, 493, 500, 508, 517, 526, 537, 548, 559, 572]
+Call Number: 12 Avg Value: 501 Change in Avg: 13 Input Value: 823
+[400, 400, 400, 480, 486, 493, 500, 508, 517, 526, 537, 548, 559, 572, 586]
+Call Number: 13 Avg Value: 514 Change in Avg: 13 Input Value: 823
+[400, 400, 480, 486, 493, 500, 508, 517, 526, 537, 548, 559, 572, 586, 601]
+Call Number: 14 Avg Value: 529 Change in Avg: 15 Input Value: 823
+[400, 480, 486, 493, 500, 508, 517, 526, 537, 548, 559, 572, 586, 601, 617]
+Call Number: 15 Avg Value: 544 Change in Avg: 15 Input Value: 823
+[480, 486, 493, 500, 508, 517, 526, 537, 548, 559, 572, 586, 601, 617, 634]
+Call Number: 16 Avg Value: 556 Change in Avg: 12 Input Value: 823
+[486, 493, 500, 508, 517, 526, 537, 548, 559, 572, 586, 601, 617, 634, 653]
+Call Number: 17 Avg Value: 568 Change in Avg: 12 Input Value: 823
+[493, 500, 508, 517, 526, 537, 548, 559, 572, 586, 601, 617, 634, 653, 667]
+Call Number: 18 Avg Value: 581 Change in Avg: 13 Input Value: 823
+[500, 508, 517, 526, 537, 548, 559, 572, 586, 601, 617, 634, 653, 667, 682]
+Call Number: 19 Avg Value: 594 Change in Avg: 13 Input Value: 823
+[508, 517, 526, 537, 548, 559, 572, 586, 601, 617, 634, 653, 667, 682, 697]
+Call Number: 20 Avg Value: 607 Change in Avg: 13 Input Value: 0
+[517, 526, 537, 548, 559, 572, 586, 601, 617, 634, 653, 667, 682, 697, 713]
+Call Number: 21 Avg Value: 605 Change in Avg: -2 Input Value: 0
+[526, 537, 548, 559, 572, 586, 601, 617, 634, 653, 667, 682, 697, 713, 486]
+Call Number: 22 Avg Value: 602 Change in Avg: -3 Input Value: 0
+[537, 548, 559, 572, 586, 601, 617, 634, 653, 667, 682, 697, 713, 486, 484]
+Call Number: 23 Avg Value: 599 Change in Avg: -3 Input Value: 0
+[548, 559, 572, 586, 601, 617, 634, 653, 667, 682, 697, 713, 486, 484, 482]
+Call Number: 24 Avg Value: 594 Change in Avg: -5 Input Value: 0
+[559, 572, 586, 601, 617, 634, 653, 667, 682, 697, 713, 486, 484, 482, 479]
+Call Number: 25 Avg Value: 589 Change in Avg: -5 Input Value: 823
+[572, 586, 601, 617, 634, 653, 667, 682, 697, 713, 486, 484, 482, 479, 475]
+Call Number: 26 Avg Value: 597 Change in Avg: 8 Input Value: 823
+[586, 601, 617, 634, 653, 667, 682, 697, 713, 486, 484, 482, 479, 475, 706]
+Call Number: 27 Avg Value: 606 Change in Avg: 9 Input Value: 823
+[601, 617, 634, 653, 667, 682, 697, 713, 486, 484, 482, 479, 475, 706, 717]
+Call Number: 28 Avg Value: 615 Change in Avg: 9 Input Value: 823
+[617, 634, 653, 667, 682, 697, 713, 486, 484, 482, 479, 475, 706, 717, 728]
+Call Number: 29 Avg Value: 623 Change in Avg: 8 Input Value: 823
+[634, 653, 667, 682, 697, 713, 486, 484, 482, 479, 475, 706, 717, 728, 738]
+Call Number: 30 Avg Value: 630 Change in Avg: 7 Input Value: 823
+[653, 667, 682, 697, 713, 486, 484, 482, 479, 475, 706, 717, 728, 738, 747]
+Call Number: 31 Avg Value: 637 Change in Avg: 7 Input Value: 823
+[667, 682, 697, 713, 486, 484, 482, 479, 475, 706, 717, 728, 738, 747, 756]
+Call Number: 32 Avg Value: 644 Change in Avg: 7 Input Value: 823
+[682, 697, 713, 486, 484, 482, 479, 475, 706, 717, 728, 738, 747, 756, 765]
+Call Number: 33 Avg Value: 650 Change in Avg: 6 Input Value: 823
+[697, 713, 486, 484, 482, 479, 475, 706, 717, 728, 738, 747, 756, 765, 772]
+Call Number: 34 Avg Value: 655 Change in Avg: 5 Input Value: 823
+[713, 486, 484, 482, 479, 475, 706, 717, 728, 738, 747, 756, 765, 772, 780]
+Call Number: 35 Avg Value: 660 Change in Avg: 5 Input Value: 823
+[486, 484, 482, 479, 475, 706, 717, 728, 738, 747, 756, 765, 772, 780, 786]
+Call Number: 36 Avg Value: 680 Change in Avg: 20 Input Value: 823
+[484, 482, 479, 475, 706, 717, 728, 738, 747, 756, 765, 772, 780, 786, 792]
+Call Number: 37 Avg Value: 703 Change in Avg: 23 Input Value: 823
+[482, 479, 475, 706, 717, 728, 738, 747, 756, 765, 772, 780, 786, 792, 817]
+Call Number: 38 Avg Value: 725 Change in Avg: 22 Input Value: 823
+[479, 475, 706, 717, 728, 738, 747, 756, 765, 772, 780, 786, 792, 817, 823]
+Call Number: 39 Avg Value: 748 Change in Avg: 23 Input Value: 823
+[475, 706, 717, 728, 738, 747, 756, 765, 772, 780, 786, 792, 817, 823, 823]
